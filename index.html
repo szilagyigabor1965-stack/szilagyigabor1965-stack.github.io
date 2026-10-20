@@ -11,10 +11,16 @@
   .sub{margin:0 0 20px;color:#555}
   .contact a{display:block;margin:6px 0;color:#12306b;font-weight:bold;text-decoration:none}
   h2{margin:28px 0 12px;font-size:20px}
-  .btn{display:flex;justify-content:space-between;align-items:center;
+  .btn,summary{display:flex;justify-content:space-between;align-items:center;
     background:#eeeeef;color:#12306b;text-decoration:none;font-weight:bold;
-    font-size:18px;padding:18px;border-radius:10px;margin-bottom:12px}
-  .btn:active{background:#dcdde0}
+    font-size:18px;padding:18px;border-radius:10px;margin-bottom:12px;
+    cursor:pointer;list-style:none;box-sizing:border-box}
+  summary::-webkit-details-marker{display:none}
+  .btn:active,summary:active{background:#dcdde0}
+  details[open] summary .arr{transform:rotate(180deg)}
+  .arr{transition:transform .2s}
+  .sub-list{margin-left:20px}
+  .sub-list .btn{font-size:16px;padding:14px}
 </style>
 </head>
 <body>
@@ -28,10 +34,30 @@
   </div>
 
   <h2>Szolgáltatások</h2>
+
+  <details>
+    <summary>Pénzügyi és biztosítási megoldások <span class="arr">↓</span></summary>
+    <div class="sub-list">
+      <a class="btn" href="#">Nyugdíj-előtakarékosság <span>→</span></a>
+      <a class="btn" href="#">Gyermekjövő <span>→</span></a>
+      <a class="btn" href="#">Vagyon felépítése <span>→</span></a>
+      <a class="btn" href="#">Hiteltermékek, állami támogatások <span>→</span></a>
+      <a class="btn" href="#">Adókedvezmények, -visszatérítések <span>→</span></a>
+      <a class="btn" href="#">Biztonság bármely élethelyzetben <span>→</span></a>
+      <a class="btn" href="#">Vagyonvédelem <span>→</span></a>
+      <a class="btn" href="#">KKV megoldások <span>→</span></a>
+    </div>
+  </details>
+
   <a class="btn" href="#">Online gépjármű biztosítás <span>→</span></a>
   <a class="btn" href="#">Online gépjármű asszisztencia <span>→</span></a>
   <a class="btn" href="#">Online utasbiztosítás <span>→</span></a>
   <a class="btn" href="#">Csatlakozzon hozzánk tanácsadóként <span>→</span></a>
+
+  <h2>Információ</h2>
+  <a class="btn" href="#">OVB hivatalos weboldala <span>→</span></a>
+  <a class="btn" href="#">OVB Magyarország Facebook oldala <span>→</span></a>
+  <a class="btn" href="#">OVB Magyarország Instagram oldala <span>→</span></a>
 </div>
 </body>
 </html>
